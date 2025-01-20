@@ -51,7 +51,12 @@ export class ProductsController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  view(@Param('id') id: string) {
     return this.productsService.view(id);
+  }
+
+  @Get()
+  viewAll() {
+    return this.productsService.viewAll();
   }
 }

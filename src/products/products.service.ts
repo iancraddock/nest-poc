@@ -64,10 +64,12 @@ export class ProductsService {
 
       const product: CreateProductDto = products.find((product) => product.sku === createProductDto.sku);
 
-      if (!product) {
+      if (!product && statusCode === HttpStatus.CREATED) {
         products.push(createProductDto);
         await writeData(productsMockPath, products);
-      } else {
+      }
+
+      if (product && statusCode === HttpStatus.CREATED) {
         statusCode = HttpStatus.UNPROCESSABLE_ENTITY;
       }
 
@@ -91,11 +93,11 @@ export class ProductsService {
             error = isAuthenticated as ResponseError;
           }
           resolve(error);
-          return [];
+          return;
         }
         case HttpStatus.UNPROCESSABLE_ENTITY: {
           resolve(isPayloadValid);
-          return [];
+          return;
         }
         // case HttpStatus.INTERNAL_SERVER_ERROR: {
         //   resolve({
@@ -119,6 +121,12 @@ export class ProductsService {
         resolve('Product does not exist!');
       }
       resolve(product);
+    });
+  }
+
+  viewAll(): Promise<CreateProductDto[]> {
+    return new Promise(async (resolve) => {
+      resolve(await readData(productsMockPath));
     });
   }
 }
