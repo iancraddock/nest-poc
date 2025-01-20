@@ -1,0 +1,32 @@
+[
+  {
+    "product_name": "Bandages",
+    "sku": "BND-001",
+    "quantity": 50,
+    "active": true
+  },
+  {
+    "product_name": "Thermometer",
+    "sku": "THM-002",
+    "quantity": 10,
+    "active": true
+  },
+  {
+    "product_name": "Syringes",
+    "sku": "SYR-003",
+    "quantity": 100,
+    "active": false
+  },
+  {
+    "product_name": "Gauze Pads",
+    "sku": "GP-004",
+    "quantity": 200,
+    "active": true
+  },
+  {
+    "product_name": "First Aid Kit",
+    "sku": "FAK-005",
+    "quantity": 5,
+    "active": true
+  }
+]

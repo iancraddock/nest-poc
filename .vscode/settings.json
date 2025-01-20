@@ -1,0 +1,42 @@
+{
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "editor.stickyScroll.scrollWithEditor": false,
+  "workbench.tree.enableStickyScroll": false,
+  "explorer.compactFolders": false,
+  "prettier.requireConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tokenColorCustomizations": {
+    "[Material Theme Darker High Contrast]": {
+      "textMateRules": [
+        {
+          "scope": "comment",
+          "settings": {
+            "foreground": "#afafafec"
+          }
+        }
+      ]
+    }
+  },
+  "editor.tabSize": 2,
+  "material-icon-theme.activeIconPack": "react",
+  "material-icon-theme.folders.associations": {
+    "collections": "json",
+    "dto": "shader",
+    "engine": "cluster",
+    "entities": "database",
+    "hasura": "interface",
+    "health": "animation",
+    "local-services": "webpack",
+    "microservice": "middleware",
+    "mutations": "graphql",
+    "queries": "graphql",
+    "releases": "supabase",
+    "webhook": "hook"
+  }
+}
